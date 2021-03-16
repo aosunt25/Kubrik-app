@@ -16,6 +16,12 @@
         android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/foto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:srcCompat="@mipmap/movies_round" />
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"

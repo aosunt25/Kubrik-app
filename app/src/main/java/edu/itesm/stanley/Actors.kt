@@ -5,4 +5,4 @@ import kotlinx.android.parcel.Parcelize
 import java.io.Serializable
 
 @Parcelize
-data class Actors(val name:String, val description:String): Parcelable
+data class Actors(val picture:Int, val name:String, val description:String): Parcelable

@@ -13,6 +13,7 @@ class ActorAdapter(private val actors : List<Actors>)
 
     inner class ActorViewHolder(renglon: View) : RecyclerView.ViewHolder(renglon){
         var nombre = renglon.findViewById<TextView>(R.id.actors)
+        var foto = renglon.findViewById<ImageView>(R.id.foto)
     }
 
     //Crea el renglón
@@ -25,7 +26,7 @@ class ActorAdapter(private val actors : List<Actors>)
     override fun onBindViewHolder(holder: ActorViewHolder, position: Int) {
         val actor= actors[position]
         holder.nombre.text = actor.name
-
+        holder.foto.setImageResource(actor.picture)
         holder.itemView.setOnClickListener {
         val action = ActorskFragmentDirections.actionActorskFragmentToActorFragment(actor)
             holder?.itemView.findNavController().navigate(action)
